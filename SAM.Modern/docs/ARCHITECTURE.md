@@ -64,7 +64,8 @@ SAM Modern is **one executable with three roles**, chosen by its command line (`
 ```powershell
 dotnet build                      # debug build
 bin\Debug\net10.0-windows\win-x64\SteamAchievementManager.exe --serve --port 51730 --token devtoken
-dotnet publish -c Release -r win-x64 --self-contained false -o dist
+dotnet publish -c Release -r win-x64 --self-contained true -o dist
 ```
 
-Requirements: Windows 10/11 x64, the .NET 10 Desktop Runtime, the WebView2 runtime, a running Steam client.
+Requirements: Windows 10/11 x64, the WebView2 runtime, a running Steam client. A framework-dependent build
+(`--self-contained false`) also needs the .NET 10 Desktop Runtime and the ASP.NET Core Runtime 10.
