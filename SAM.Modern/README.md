@@ -40,15 +40,20 @@ and `Esc` to go back from a game.
 
 ## Running
 
-Start `SteamAchievementManager.exe` (Steam must be running). Requirements: Windows 10/11 x64,
-the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0) and the Microsoft WebView2 runtime
-(preinstalled on Windows 11).
+[Download the latest release](https://github.com/enmel541/SteamAchievementManager/releases/latest), unzip it and start
+`SteamAchievementManager.exe` (Steam must be running). Requirements: Windows 10/11 x64 and the Microsoft WebView2 runtime
+(preinstalled on Windows 11). The release brings its own .NET runtime.
 
 ## Building
 
+With the .NET 10 SDK:
+
 ```powershell
-dotnet publish -c Release -r win-x64 --self-contained false -o dist
+dotnet publish -c Release -r win-x64 --self-contained true -o dist
 ```
+
+With `--self-contained false` the build is much smaller, but the PC then needs both the
+[.NET 10 Desktop Runtime and the ASP.NET Core Runtime 10](https://dotnet.microsoft.com/download/dotnet/10.0).
 
 ## Notes
 
