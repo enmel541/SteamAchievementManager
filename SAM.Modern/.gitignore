@@ -1,0 +1,16 @@
+# Build output
+bin/
+obj/
+dist/
+
+# IDE / user files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Local test data and scratch files must never be committed
+scratch-*
+*.local.json
+dev-url.txt
